@@ -1,0 +1,15 @@
+<!DOCTYPE doc SYSTEM '3canciones.dtd' [
+        <!ELEMENT doc (cancion+)>
+        <!ELEMENT cancion (titulo, compositores, productores, artistas)>
+        <!ELEMENT titulo (#PCDATA)>
+        <!ELEMENT compositores (compositor+)>
+        <!ELEMENT compositor (#PCDATA)>
+        <!ELEMENT productores (productor+)>
+        <!ELEMENT productor (#PCDATA)>
+        <!ELEMENT artistas (artista+)>
+        <!ELEMENT artista (#PCDATA)>
+        <!ATTLIST cancion
+                duracion CDATA #IMPLIED
+                anio CDATA #IMPLIED
+                >
+        ]>
