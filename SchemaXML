@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cancion duracion="3:58" anio="2017" genero="pop latino" idioma="español">
+    <titulo>Despacito</titulo>
+    <compositores>
+        <compositor>Luis Fonsi</compositor>
+        <compositor>Daddy Yankee</compositor>
+    </compositores>
+    <productores>
+        <productor nombre="Mauricio Rengifo" discografia="Universal Music Latin Entertainment"/>
+        <productor nombre="Andrés Torres" discografia="Universal Music Latin Entertainment"/>
+    </productores>
+    <artistas>
+        <artista nombre="Luis Fonsi" nacionalidad="Puerto Rico"/>
+        <artista nombre="Daddy Yankee" nacionalidad="Puerto Rico"/>
+    </artistas>
+</cancion>
