@@ -1,0 +1,36 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <xsd:element name="cancion">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="titulo" type="xsd:string"/>
+                <xsd:element name="duracion" type="xsd:time"/>
+                <xsd:element name="anio" type="xsd:gYear"/>
+                <xsd:element name="genero" type="xsd:string"/>
+                <xsd:element name="idioma" type="xsd:string"/>
+                <xsd:element name="compositores" minOccurs="0">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="compositor" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="productores" minOccurs="0">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="productor" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="artistas" minOccurs="0">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="artista" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>
