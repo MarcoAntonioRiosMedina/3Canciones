@@ -1,16 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cancion duracion="3:58" anio="2017" genero="pop latino" idioma="español">
-    <titulo>Despacito</titulo>
-    <compositores>
-        <compositor>Luis Fonsi</compositor>
-        <compositor>Daddy Yankee</compositor>
-    </compositores>
-    <productores>
-        <productor nombre="Mauricio Rengifo" discografia="Universal Music Latin Entertainment"/>
-        <productor nombre="Andrés Torres" discografia="Universal Music Latin Entertainment"/>
-    </productores>
-    <artistas>
-        <artista nombre="Luis Fonsi" nacionalidad="Puerto Rico"/>
-        <artista nombre="Daddy Yankee" nacionalidad="Puerto Rico"/>
-    </artistas>
-</cancion>
+<doc>
+    <cancion duracion="3:58" anio="2017" genero="pop latino" idioma="español">
+        <titulo>Despacito</titulo>
+        <compositores>
+            <compositor nombre="Luis" apellido="Fonsi">
+            </compositor>
+            <compositor nombre="Daddy" apellido="Yankee">
+            </compositor>
+        </compositores>
+        <productores>
+            <productor nombre="Mauricio" apellido="Rengifo">
+                <disquera>Universal Music Latin Entertainment</disquera>
+            </productor>
+            <productor nombre="Andrés" apellido="Torres">
+                <disquera>Universal Music Latin Entertainment</disquera>
+            </productor>
+        </productores>
+        <artistas>
+            <artista nombre="Luis" apellido="Fonsi">
+                <nacionalidad>Puerto Rico</nacionalidad>
+            </artista>
+            <artista nombre="Daddy" apellido="Yankee">
+                <nacionalidad>Puerto Rico</nacionalidad>
+            </artista>
+        </artistas>
+    </cancion>
+    <cancion duracion="4:02" anio="2023" genero="pop" idioma="inglés">
+        <titulo>As It Was</titulo>
+        <compositores>
+            <compositor nombre="Harry" apellido="Styles">
+            </compositor>
+        </compositores>
+        <productores>
+            <productor nombre="Kid Harpoon">
+                <disquera>Columbia Records</disquera>
+            </productor>
+            <productor nombre="Tyler Johnson">
+                <disquera>Columbia Records</disquera>
+            </productor>
+        </productores>
+        <artistas>
+            <artista nombre="Harry" apellido="Styles">
+                <nacionalidad>Reino Unido</nacionalidad>
+            </artista>
+        </artistas>
+    </cancion>
+    <cancion duracion="3:30" anio="2022" genero="pop latino" idioma="español">
+        <titulo>Todo de ti</titulo>
+        <compositores>
+            <compositor nombre="Ricardo" apellido="Arjona">
+            </compositor>
+        </compositores>
+        <productores>
+            <productor nombre="Ricardo" apellido="Arjona">
+                <disquera>Sony Music Entertainment</disquera>
+            </productor>
+        </productores>
+        <artistas>
+            <artista nombre="Ricardo" apellido="Arjona">
+                <nacionalidad>Guatemala</nacionalidad>
+            </artista>
+            <artista nombre="Julieta" apellido="Sanz">
+                <nacionalidad>España</nacionalidad>
+            </artista>
+        </artistas>
+    </cancion>
+</doc>
