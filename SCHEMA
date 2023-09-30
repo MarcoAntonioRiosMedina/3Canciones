@@ -1,36 +1,83 @@
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-
-    <xsd:element name="cancion">
-        <xsd:complexType>
-            <xsd:sequence>
-                <xsd:element name="titulo" type="xsd:string"/>
-                <xsd:element name="duracion" type="xsd:time"/>
-                <xsd:element name="anio" type="xsd:gYear"/>
-                <xsd:element name="genero" type="xsd:string"/>
-                <xsd:element name="idioma" type="xsd:string"/>
-                <xsd:element name="compositores" minOccurs="0">
-                    <xsd:complexType>
-                        <xsd:sequence>
-                            <xsd:element name="compositor" type="xsd:string"/>
-                        </xsd:sequence>
-                    </xsd:complexType>
-                </xsd:element>
-                <xsd:element name="productores" minOccurs="0">
-                    <xsd:complexType>
-                        <xsd:sequence>
-                            <xsd:element name="productor" type="xsd:string"/>
-                        </xsd:sequence>
-                    </xsd:complexType>
-                </xsd:element>
-                <xsd:element name="artistas" minOccurs="0">
-                    <xsd:complexType>
-                        <xsd:sequence>
-                            <xsd:element name="artista" type="xsd:string"/>
-                        </xsd:sequence>
-                    </xsd:complexType>
-                </xsd:element>
-            </xsd:sequence>
-        </xsd:complexType>
-    </xsd:element>
-
-</xsd:schema>
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="doc" type="docType"/>
+  <xs:complexType name="compositorType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="nombre" use="optional"/>
+        <xs:attribute type="xs:string" name="apellido" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="compositoresType">
+    <xs:sequence>
+      <xs:element type="compositorType" name="compositor" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="productorType">
+    <xs:sequence>
+      <xs:element name="disquera">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Universal Music Latin Entertainment"/>
+            <xs:enumeration value="Columbia Records"/>
+            <xs:enumeration value="Sony Music Entertainment"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="nombre" use="optional"/>
+    <xs:attribute type="xs:string" name="apellido" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="productoresType">
+    <xs:sequence>
+      <xs:element type="productorType" name="productor" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="artistaType">
+    <xs:sequence>
+      <xs:element name="nacionalidad">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Puerto Rico"/>
+            <xs:enumeration value="Reino Unido"/>
+            <xs:enumeration value="Guatemala"/>
+            <xs:enumeration value="España"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="nombre" use="optional"/>
+    <xs:attribute type="xs:string" name="apellido" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="artistasType">
+    <xs:sequence>
+      <xs:element type="artistaType" name="artista" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancionType">
+    <xs:sequence>
+      <xs:element name="titulo">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Despacito"/>
+            <xs:enumeration value="As It Was"/>
+            <xs:enumeration value="Todo de ti"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="compositoresType" name="compositores"/>
+      <xs:element type="productoresType" name="productores"/>
+      <xs:element type="artistasType" name="artistas"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="duracion" use="optional"/>
+    <xs:attribute type="xs:string" name="anio" use="optional"/>
+    <xs:attribute type="xs:string" name="genero" use="optional"/>
+    <xs:attribute type="xs:string" name="idioma" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="docType">
+    <xs:sequence>
+      <xs:element type="cancionType" name="cancion" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
